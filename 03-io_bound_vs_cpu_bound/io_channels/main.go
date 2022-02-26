@@ -40,6 +40,7 @@ func main() {
 func checkLink(link string, c chan string) {
 
 	_, err := http.Get(link)
+
 	if err != nil {
 		fmt.Println(link, "is not responding!")
 		c <- link
